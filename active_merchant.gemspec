@@ -1,7 +1,5 @@
 $:.push File.expand_path("../lib", __FILE__)
 
-require 'rake/file_list'
-
 spec = Gem::Specification.new do |s|
   s.name = 'active_merchant'
   s.version = '1.4.2'
