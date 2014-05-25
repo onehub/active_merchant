@@ -1,14 +1,16 @@
 $:.push File.expand_path("../lib", __FILE__)
 
+require 'rake/file_list'
+
 spec = Gem::Specification.new do |s|
   s.name = 'active_merchant'
   s.version = '1.4.2'
   s.summary = "Framework and tools for dealing with credit card transactions."
   s.has_rdoc = true
 
-  s.files = FileList[
+  s.files = Dir[
     "lib/**/*", "test/**/*", "script/**/*", "[a-zA-Z]*"
-].exclude(/\.svn$/)
+  ]
 
   s.rubyforge_project = "active_merchant"
   s.require_path = 'lib'
